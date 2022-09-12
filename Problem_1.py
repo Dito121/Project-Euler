@@ -20,8 +20,4 @@ def sum_of_3_5_multiples(N):
         elif numbers[i] % 5 == 0:
             summ += numbers[i]
 
-    print(summ)
-
-
-sum_of_3_5_multiples(10)
-sum_of_3_5_multiples(1000)
+    return summ
