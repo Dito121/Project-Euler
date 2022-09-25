@@ -5,3 +5,16 @@ What is the 10 001st prime number?
 """
 
 
+def problem_7(n):
+    primes = [2]
+    attempt = 3
+
+    while len(primes) < n:
+        if all(attempt % prime != 0 for prime in primes):
+            primes.append(attempt)
+        attempt += 2
+    print(primes[-1])
+    return primes[-1]
+
+
+problem_7(10001)

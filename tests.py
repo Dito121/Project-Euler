@@ -5,6 +5,7 @@ from problem_3 import find_prime_factors
 from problem_4 import largest_palindrome
 from problem_5 import problem_5
 from problem_6 import problem_6
+from problem_7 import problem_7
 
 
 class test_problems(unittest.TestCase):
@@ -25,6 +26,9 @@ class test_problems(unittest.TestCase):
 
     def test_problem_6(self):
         self.assertEqual(problem_6(10), 2640)
+
+    def test_problem_7(self):
+        self.assertEqual(problem_7(6), 13)
 
 
 if __name__ == '__main__':
