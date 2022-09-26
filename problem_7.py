@@ -13,8 +13,5 @@ def problem_7(n):
         if all(attempt % prime != 0 for prime in primes):
             primes.append(attempt)
         attempt += 2
-    print(primes[-1])
+
     return primes[-1]
-
-
-problem_7(10001)

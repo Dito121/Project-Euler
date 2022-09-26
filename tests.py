@@ -6,6 +6,9 @@ from problem_4 import largest_palindrome
 from problem_5 import problem_5
 from problem_6 import problem_6
 from problem_7 import problem_7
+from problem_8 import problem_8
+from problem_9 import problem_9
+from problem_10 import problem_10
 
 
 class test_problems(unittest.TestCase):
@@ -29,6 +32,12 @@ class test_problems(unittest.TestCase):
 
     def test_problem_7(self):
         self.assertEqual(problem_7(6), 13)
+
+    def test_problem_8(self):
+        self.assertEqual(problem_8(4), 5832)
+
+    def test_problem_10(self):
+        self.assertEqual(problem_10(10), 17)
 
 
 if __name__ == '__main__':
