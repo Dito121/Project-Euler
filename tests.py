@@ -9,6 +9,7 @@ from problem_7 import problem_7
 from problem_8 import problem_8
 from problem_9 import problem_9
 from problem_10 import problem_10
+from problem_14 import problem_14
 
 
 class test_problems(unittest.TestCase):
@@ -18,11 +19,11 @@ class test_problems(unittest.TestCase):
     def test_problem_2(self):
         self.assertEqual(sum_of_fibonacci_sequence(4000000), 4613732)
 
-    # def test_problem_3(self):
-    #     self.assertEqual(find_prime_factors(13195), [5, 7, 13, 29])
+    def test_problem_3(self):
+        self.assertEqual(find_prime_factors(13195), [5, 7, 13, 29])
 
-    # def test_problem_4(self):
-    #     self.assertEqual(largest_palindrome(100), "9009")
+    def test_problem_4(self):
+        self.assertEqual(largest_palindrome(100), "9009")
 
     def test_problem_5(self):
         self.assertEqual(problem_5(10), 2520)
@@ -40,5 +41,5 @@ class test_problems(unittest.TestCase):
         self.assertEqual(problem_10(10), 17)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
