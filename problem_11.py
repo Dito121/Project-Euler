@@ -28,6 +28,7 @@ What is the greatest product of four adjacent numbers in the same direction (up,
 """
 
 import numpy as np
+from math import prod
 
 
 grid = np.array(
@@ -118,18 +119,18 @@ class Search:
 
     def horizontal(self):
         self.max_horizontal = max(
-            self.max_horizontal, sum(self.grid[self.p[0]][self.p[1] : self.p[1] + 3])
+            self.max_horizontal, prod(self.grid[self.p[0]][self.p[1] : self.p[1] + 3])
         )
 
     def vertical(self):
         self.max_vertical = max(
-            self.max_vertical, sum(self.grid[self.p[0]][self.p[1] : self.p[1] + 3])
+            self.max_vertical, prod(self.grid[self.p[0]][self.p[1] : self.p[1] + 3])
         )
 
     def diagonal(self):
         self.max_diagonal = max(
             self.max_diagonal,
-            sum(
+            prod(
                 [
                     self.grid[self.p[0]][self.p[1]],
                     self.grid[self.p[0] + 1][self.p[1] + 1],
@@ -152,7 +153,7 @@ class Search:
 
                 self.next_col()
 
-            self.next_row
+            self.next_row()
 
         print(max(self.max_vertical, self.max_horizontal, self.max_diagonal))
         return max(self.max_vertical, self.max_horizontal, self.max_diagonal)
